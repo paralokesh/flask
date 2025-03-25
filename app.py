@@ -7,5 +7,9 @@ app=Flask(__name__)
 def welcome():
     return "Welcome to the Flask application"
 
+@app.route("/index")
+def index():
+    return "Welcome to the index route"
+
 if __name__=="__main__":
-    app.run()
+    app.run(debug=True)
